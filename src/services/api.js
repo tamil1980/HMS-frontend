@@ -340,4 +340,16 @@ export const reportAPI = {
   yearly: (params) => api.get('/reports/yearly', { params }),
 };
 
+// ---- Consolidated Billing (all departments in one bill) ----
+export const consolidatedBillAPI = {
+  getBills: (params) => api.get('/consolidated-bills/bills', { params }),
+  getBillById: (id) => api.get(`/consolidated-bills/bills/${id}`),
+  getBillPDF: (id, download) => api.get(`/consolidated-bills/bills/${id}/pdf`, { params: { download: download ? '1' : undefined }, responseType: 'blob' }),
+  createBill: (data) => api.post('/consolidated-bills/bills', data),
+  updateBill: (id, data) => api.put(`/consolidated-bills/bills/${id}`, data),
+  addPayment: (id, data) => api.put(`/consolidated-bills/bills/${id}/payment`, data),
+  removeBill: (id) => api.delete(`/consolidated-bills/bills/${id}`),
+  collectionReport: (params) => api.get('/consolidated-bills/bills/collection-report', { params }),
+};
+
 export default api;

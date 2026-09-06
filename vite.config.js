@@ -6,8 +6,8 @@ export default defineConfig({
   server: {
     port: 3000,
     proxy: {
-      '/api': 'https://hms-lijr.onrender.com',
-      '/uploads': 'https://hms-lijr.onrender.com',
+      '/api': 'http://localhost:5000',
+      '/uploads': 'http://localhost:5000',
     },
   },
 });

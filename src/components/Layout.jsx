@@ -122,6 +122,7 @@ const allMenuItems = [
   {
     key: '/billing', icon: <CreditCardOutlined style={{ color: '#DC2626' }} />, label: 'Billing',
     children: [
+      { key: '/consolidated-bills', icon: <PartitionOutlined />, label: 'All Type Bill (Combined)', roles: ROLE.billing },
       { key: '/invoices', icon: <FileTextOutlined />, label: 'OP Bill', roles: ROLE.billing },
       { key: '/ip/bills', icon: <HomeOutlined />, label: 'IP Bill', roles: ROLE.billing },
       { key: '/lab/bills', icon: <ExperimentOutlined />, label: 'Lab Bill', roles: ROLE.billing },

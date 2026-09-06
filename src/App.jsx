@@ -65,6 +65,8 @@ import Employees from './pages/Employees';
 import Attendance from './pages/Attendance';
 import Salary from './pages/Salary';
 import Reports from './pages/Reports';
+import ConsolidatedBills from './pages/ConsolidatedBills';
+import ConsolidatedBillForm from './pages/ConsolidatedBillForm';
 
 export default function App() {
   const { loading } = useAuth();
@@ -144,6 +146,9 @@ export default function App() {
         <Route path="radiology/bills/new" element={<RadiologyBillForm />} />
         <Route path="radiology/bills/:id/edit" element={<RadiologyBillForm />} />
         <Route path="radiology/reports" element={<RadiologyReports />} />
+        <Route path="consolidated-bills" element={<ConsolidatedBills />} />
+        <Route path="consolidated-bills/new" element={<ConsolidatedBillForm />} />
+        <Route path="consolidated-bills/:id/edit" element={<ConsolidatedBillForm />} />
         <Route path="insurance/companies" element={<InsuranceCompanies />} />
         <Route path="insurance/claims" element={<InsuranceClaims />} />
         <Route path="payments" element={<Payments />} />
